@@ -1,0 +1,114 @@
+# ================================================
+# KorBot X Enhanced - Python Requirements
+# Version: 2.0
+# Date: 2026-02-16
+# ================================================
+
+# Core Trading & Data
+MetaTrader5>=5.0.45
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Technical Analysis
+ta>=0.10.2
+scipy>=1.11.0
+
+# Machine Learning & AI
+xgboost>=2.0.3
+lightgbm>=4.1.0  # Additional ML model (faster than XGBoost)
+stable-baselines3>=2.3.0
+gymnasium>=0.29.1
+scikit-learn>=1.4.0
+tensorflow>=2.15.0  # For advanced deep learning models
+
+# Optimization
+scikit-optimize>=0.9.0  # Bayesian optimization
+optuna>=3.5.0  # Alternative hyperparameter optimization
+deap>=1.4.1
+
+# Database & Caching
+redis>=5.0.1
+SQLAlchemy>=2.0.25  # ORM for better database management
+
+# API & Web
+requests>=2.31.0
+aiohttp>=3.9.0  # Async HTTP for better performance
+
+# Configuration & Environment
+python-dotenv>=1.0.0
+PyYAML>=6.0.1
+pydantic>=2.5.0  # Data validation
+
+# GUI
+PyQt6>=6.7.0
+pyqtgraph>=0.13.3  # For charts in GUI
+matplotlib>=3.8.0
+plotly>=5.18.0  # Interactive charts
+
+# Notifications
+python-telegram-bot>=20.7
+asyncio>=3.4.3
+
+# Utilities
+colorama>=0.4.6  # Colored console output
+tqdm>=4.66.0  # Progress bars
+python-dateutil>=2.8.2
+pytz>=2023.3
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+hypothesis>=6.92.0  # Property-based testing
+
+# Code Quality
+black>=23.12.0  # Code formatting
+flake8>=7.0.0  # Linting
+mypy>=1.8.0  # Type checking
+pylint>=3.0.0  # Additional linting
+
+# Logging & Monitoring
+python-json-logger>=2.0.7
+sentry-sdk>=1.39.0  # Error tracking (optional)
+
+# Performance
+numba>=0.59.0  # JIT compilation for NumPy
+cython>=3.0.0  # C-extensions for speed
+
+# Data Validation & Serialization
+marshmallow>=3.20.0
+jsonschema>=4.20.0
+
+# Development
+ipython>=8.19.0
+jupyter>=1.0.0
+notebook>=7.0.0
+
+# Documentation
+sphinx>=7.2.0
+sphinx-rtd-theme>=2.0.0
+
+# ================================================
+# Optional Dependencies (for specific features)
+# ================================================
+
+# News & Sentiment Analysis (optional)
+# newspaper3k>=0.2.8
+# textblob>=0.17.1
+# vaderSentiment>=3.3.2
+
+# Advanced Visualization (optional)
+# seaborn>=0.13.0
+# bokeh>=3.3.0
+
+# Cloud Integration (optional)
+# boto3>=1.34.0  # AWS
+# google-cloud-storage>=2.14.0  # GCP
+# azure-storage-blob>=12.19.0  # Azure
+
+# ================================================
+# Notes:
+# - Install with: pip install -r requirements.txt
+# - For GPU support (TensorFlow): pip install tensorflow[and-cuda]
+# - Some packages may require system dependencies
+# ================================================
