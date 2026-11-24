@@ -7,6 +7,7 @@ Secure configuration loading from YAML and environment variables.
 """
 
 import os
+from copy import deepcopy
 import yaml
 from pathlib import Path
 from typing import Dict, Any
@@ -19,7 +20,7 @@ logger = logging.getLogger(__name__)
 class ConfigLoader:
     """Secure configuration loader"""
     
-    def __init__(self, config_path: str = "config/config.yaml"):
+    def __init__(self, config_path: str = "config.yaml"):
         """
         Initialize configuration loader
         
@@ -170,7 +171,7 @@ class ConfigLoader:
             output_path = self.config_path
         
         # Create a copy without sensitive data
-        safe_config = self.config.copy()
+        safe_config = deepcopy(self.config)
         
         # Remove sensitive data
         if 'mt5' in safe_config:
@@ -183,6 +184,10 @@ class ConfigLoader:
         if 'telegram' in safe_config:
             safe_config['telegram']['token'] = '***'
             safe_config['telegram']['chat_id'] = '***'
+
+        redis_config = safe_config.get('database', {}).get('redis', {})
+        if 'password' in redis_config:
+            redis_config['password'] = '***'
         
         try:
             with open(output_path, 'w', encoding='utf-8') as f:
@@ -208,7 +213,7 @@ class ConfigLoader:
 _config_instance = None
 
 
-def get_config(config_path: str = "config/config.yaml") -> ConfigLoader:
+def get_config(config_path: str = "config.yaml") -> ConfigLoader:
     """
     Get global configuration instance (Singleton pattern)
     

@@ -6,7 +6,6 @@
 # Store sensitive data in environment variables or .env file
 # Never commit API keys, tokens, or passwords to version control
 
----
 # 📊 Trading Configuration
 trading:
   # Default symbol
@@ -29,7 +28,6 @@ trading:
     breakout: true
     adaptive_swing: true
 
----
 # 🛡️ Risk Management
 risk:
   # Base risk per trade (% of account)
@@ -66,7 +64,6 @@ risk:
     use_trailing: true
     trailing_atr_multiplier: 1.5
 
----
 # 🤖 AI & Machine Learning
 ai:
   # XGBoost Confidence Model
@@ -100,7 +97,6 @@ ai:
     n_initial_points: 20
     acquisition_function: "EI"  # Expected Improvement
 
----
 # 📈 Strategy Parameters
 strategies:
   scalping:
@@ -138,7 +134,6 @@ strategies:
     adx_period: 14
     adx_threshold: 25
 
----
 # 💾 Database Configuration
 database:
   sqlite:
@@ -154,7 +149,6 @@ database:
     use_pipeline: true
     pipeline_size: 100
 
----
 # 📱 Notifications
 telegram:
   enabled: true
@@ -173,7 +167,6 @@ telegram:
     errors: true
     performance_milestones: true
 
----
 # 🔧 Performance & Optimization
 performance:
   # Caching
@@ -193,7 +186,6 @@ performance:
     enabled: false  # Set to true if needed
     num_workers: 4
 
----
 # 📊 Backtesting
 backtesting:
   # Historical data range
@@ -233,7 +225,6 @@ backtesting:
     - "mae"
     - "mfe"
 
----
 # 📝 Logging
 logging:
   level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
@@ -251,7 +242,6 @@ logging:
     
   console_output: true
 
----
 # 🖥️ GUI Settings
 gui:
   theme: "dark"
@@ -266,7 +256,6 @@ gui:
     performance: true
     logs: true
 
----
 # 🔄 System
 system:
   # Auto-restart on crash
@@ -283,7 +272,6 @@ system:
   cleanup_old_logs_days: 30
   cleanup_old_trades_days: 365
 
----
 # 🧪 Testing & Development
 development:
   debug_mode: false
@@ -291,5 +279,4 @@ development:
   test_mode: false
   mock_mt5: false  # Use mock data instead of MT5
 
----
 # END OF CONFIGURATION

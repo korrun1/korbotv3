@@ -31,7 +31,7 @@ logger = logging.getLogger(__name__)
 class KorBotX:
     """Main trading bot class"""
     
-    def __init__(self, config_path: str = "config/config.yaml"):
+    def __init__(self, config_path: str = "config.yaml"):
         """
         Initialize KorBot X
         
